@@ -9,6 +9,6 @@
 // @include		http://bt.neu6.edu.cn/thread*
 // @include		http://bt.neu6.edu.cn/forum.php?mod=viewthread*
 // @icon		http://bt.neu6.edu.cn/favicon.ico
-// @updateURL	none
-// @downloadURL	none
+// @updateURL	https://github.com/popcorner/neu6estimate/raw/master/neu6estimate.user.js
+// @downloadURL	https://github.com/popcorner/neu6estimate/raw/master/neu6estimate.user.js
 // ==/UserScript==
