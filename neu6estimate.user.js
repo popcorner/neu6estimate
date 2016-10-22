@@ -3,7 +3,7 @@
 // @name:en		neu6estimate
 // @namespace	http://github.com/popcorner/neu6estimate
 // @description	estimate
-// @version		0.1.0
+// @version		0.1.1
 // @author		popcorner
 // @grant		none
 // @include		http://bt.neu6.edu.cn/thread*
