@@ -3,7 +3,7 @@
 // @name:en		neu6estimate
 // @namespace	https://github.com/popcorner/neu6estimate
 // @description	estimate
-// @version		1.0.0
+// @version		1.0.1
 // @author		popcorner
 // @grant		GM_xmlhttpRequest
 // @include		http://bt.neu6.edu.cn/thread*
@@ -15,11 +15,11 @@
 // ==/UserScript==
 
 var jq = jQuery.noConflict();
+var retlist = {"1":"\u60a8\u9700\u8981\u5148\u767b\u5f55forum.neubt.com\u624d\u80fd\u4f7f\u7528\u6b64\u5de5\u5177","2":"\u5e16\u5b50\u4e0d\u5b58\u5728","3":"\u6ca1\u6709\u6743\u9650","4":"\u975e\u8d44\u6e90\u5e16"};
 
 function responseParser(text){
     var tj = JSON.parse(text);
     if(tj.error) {
-        var retlist = {"1":"\u60a8\u9700\u8981\u5148\u767b\u5f55forum.neubt.com\u624d\u80fd\u4f7f\u7528\u6b64\u5de5\u5177","2":"\u5e16\u5b50\u4e0d\u5b58\u5728","3":"\u60a8\u6ca1\u6709\u672c\u7248\u5757\u7684\u7ba1\u7406\u6743\u9650","4":"\u65e0\u6cd5\u5bf9\u6b64\u5e16\u8fdb\u884c\u4f30\u8ba1\u64cd\u4f5c"};
         alert(retlist[tj.error]);
         if(tj.error==1) {
             return '<a href="http://forum.neubt.com/login" target="_blank">\u53bb\u767b\u5f55</a>';
@@ -40,8 +40,22 @@ function estquery(){
         }
     });
 }
+function errcheck(){
+    var errnum = '';
+    if(jq('#postlist .mtw.mbw').length>0) {
+        errnum = '3';
+    } else {
+        errnum = '4';
+    }
+    jq('#postlist div.ptn').html('<span class="xg1">'+retlist[errnum]+'</span>');
+    jq('#postlist div.ptn').unbind();
+}
 if(jq('#postlist .mtw.mbw').length>0 && jq('#modmenu').length>0) {
     jq('#postlist div.ptn').click(function(){
         estquery();
+    });
+} else {
+    jq('#postlist div.ptn').click(function(){
+        errcheck();
     });
 }
