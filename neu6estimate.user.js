@@ -3,7 +3,7 @@
 // @name:en		neu6estimate
 // @namespace	https://github.com/popcorner/neu6estimate
 // @description	estimate
-// @version		1.1.0
+// @version		1.1.1
 // @author		popcorner
 // @grant		GM_xmlhttpRequest
 // @include		http://bt.neu6.edu.cn/thread*
@@ -32,6 +32,7 @@ function responseParser(text){
     }
 }
 function estquery(){
+    jq('#postlist div.ptn').html('<span class="xg1">\u8bf7\u7a0d\u5019\u2026</span>');
     GM_xmlhttpRequest({
         method: "GET",
         url: "http://forum.neubt.com/api/estimate/"+tid,
