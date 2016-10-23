@@ -3,7 +3,7 @@
 // @name:en		neu6estimate
 // @namespace	https://github.com/popcorner/neu6estimate
 // @description	estimate
-// @version		1.0.2
+// @version		1.1.0
 // @author		popcorner
 // @grant		GM_xmlhttpRequest
 // @include		http://bt.neu6.edu.cn/thread*
@@ -43,10 +43,10 @@ function estquery(){
 }
 function errcheck(){
     var errnum = '';
-    if(jq('#postlist .mtw.mbw').length>0) {
-        errnum = '3';
-    } else {
+    if(jq('#modmenu').length>0) {
         errnum = '4';
+    } else {
+        errnum = '3';
     }
     jq('#postlist div.ptn').html('<span class="xg1">'+retlist[errnum]+'</span>');
     jq('#postlist div.ptn').unbind();
