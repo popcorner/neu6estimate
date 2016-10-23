@@ -3,7 +3,7 @@
 // @name:en		neu6estimate
 // @namespace	https://github.com/popcorner/neu6estimate
 // @description	estimate
-// @version		1.0.1
+// @version		1.0.2
 // @author		popcorner
 // @grant		GM_xmlhttpRequest
 // @include		http://bt.neu6.edu.cn/thread*
@@ -12,6 +12,7 @@
 // @icon		http://bt.neu6.edu.cn/favicon.ico
 // @updateURL	https://github.com/popcorner/neu6estimate/raw/master/neu6estimate.user.js
 // @downloadURL	https://github.com/popcorner/neu6estimate/raw/master/neu6estimate.user.js
+// @supportURL	http://bt.neu6.edu.cn/thread-1562575-1-1.html
 // ==/UserScript==
 
 var jq = jQuery.noConflict();
