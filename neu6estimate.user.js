@@ -3,13 +3,13 @@
 // @name:en		neu6estimate
 // @namespace	https://github.com/popcorner/neu6estimate
 // @description	estimate
-// @version		1.1.2
+// @version		1.1.3
 // @author		popcorner
 // @grant		GM_xmlhttpRequest
 // @include		http://bt.neu6.edu.cn/thread*
 // @include		http://bt.neu6.edu.cn/forum.php?mod=viewthread*
 // @require		http://bt.neu6.edu.cn/static/js/mobile/jquery-1.8.3.min.js
-// @connect		http://forum.neubt.com
+// @connect		forum.neubt.com
 // @icon		http://bt.neu6.edu.cn/favicon.ico
 // @updateURL	https://github.com/popcorner/neu6estimate/raw/master/neu6estimate.user.js
 // @downloadURL	https://github.com/popcorner/neu6estimate/raw/master/neu6estimate.user.js
