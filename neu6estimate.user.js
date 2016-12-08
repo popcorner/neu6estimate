@@ -3,7 +3,7 @@
 // @name:en		neu6estimate
 // @namespace	https://github.com/popcorner/neu6estimate
 // @description	estimate
-// @version		1.1.3
+// @version		1.2.0
 // @author		popcorner
 // @grant		GM_xmlhttpRequest
 // @include		http://bt.neu6.edu.cn/thread*
@@ -29,7 +29,7 @@ function responseParser(text){
             return '';
         }
     } else {
-        return '<span class="xg1">↑</span> <span class="xi1">'+tj.est1+(tj.est1>9?'+':'')+'</span><span class="pipe">|</span><span class="xg1">↓</span> <span class="xi1">'+tj.est2+(tj.est2>9?'+':'')+'</span><span class="pipe">|</span><span class="xg1">√</span> <span class="xi1">'+tj.est3+(tj.est3>9?'+':'')+'</span>';
+        return '<span class="xg1">↑</span> <span class="xi1">'+tj.est1+(tj.est1>99?'+':'')+'</span><span class="pipe">|</span><span class="xg1">↓</span> <span class="xi1">'+tj.est2+(tj.est2>99?'+':'')+'</span><span class="pipe">|</span><span class="xg1">√</span> <span class="xi1">'+tj.est3+(tj.est3>99?'+':'')+'</span>';
     }
 }
 function estquery(){
